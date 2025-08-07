@@ -14,8 +14,7 @@ public class Combattant {
     private int nombresDefaites;
     private final List<String> listeTitres;
 
-    public Combattant(String id, String nom, String prenom, String nomCombattant, double poids,
-            List<String> listeTitres) {
+    public Combattant(String id, String nom, String prenom, String nomCombattant, double poids) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
