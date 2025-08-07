@@ -1,0 +1,93 @@
+package nassai.example.Model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Combattant {
+    private final String id;
+    private final String nom;
+    private final String prenom;
+    private final String nomCombattant;
+    private double poids;
+    private int nombresVictoires;
+    private int nombresEgalite;
+    private int nombresDefaites;
+    private List<String> listeTitres;
+
+    public Combattant(String id, String nom, String prenom, String nomCombattant, double poids,
+            List<String> listeTitres) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.nomCombattant = nomCombattant;
+        this.poids = poids;
+        this.nombresVictoires = 0;
+        this.nombresEgalite = 0;
+        this.nombresDefaites = 0;
+        this.listeTitres = new ArrayList<>();
+    }
+
+    // getters
+    public String getId() {
+        return id;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public String getNomCombattant() {
+        return nomCombattant;
+    }
+
+    public double getPoids() {
+        return poids;
+    }
+
+    public List<String> getListeTitres() {
+        return listeTitres;
+    }
+
+
+    public int getNombresVictoires() {
+        return nombresVictoires;
+    }
+
+    // Setters
+    public void setPoids(double poids) {
+        this.poids = poids;
+    }
+
+    public void setNombresVictoires(int nombresVictoires) {
+        this.nombresVictoires++;
+    }
+
+    public void setNombresEgalite(int nombresEgalite) {
+        this.nombresEgalite++;
+    }
+
+    public void setNombresDefaites(int nombresDefaites) {
+        this.nombresDefaites++;
+    }
+
+    public void setListeTitres(List<String> listeTitres) {
+        this.listeTitres = listeTitres;
+    }
+
+    
+
+    // toString
+    @Override
+    public String toString() {
+        return "Combattant [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", nomCombattant=" + nomCombattant
+                + ", poids=" + poids + ", listeTitres=" + listeTitres + "]";
+    }
+
+    
+
+
+}
