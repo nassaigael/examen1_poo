@@ -12,7 +12,7 @@ public class Combattant {
     private int nombresVictoires;
     private int nombresEgalite;
     private int nombresDefaites;
-    private List<String> listeTitres;
+    private final List<String> listeTitres;
 
     public Combattant(String id, String nom, String prenom, String nomCombattant, double poids,
             List<String> listeTitres) {
@@ -52,33 +52,39 @@ public class Combattant {
         return listeTitres;
     }
 
-
     public int getNombresVictoires() {
         return nombresVictoires;
     }
+
+    public int getNombresEgalite() {
+        return nombresEgalite;
+    }
+
+    public int getNombresDefaites() {
+        return nombresDefaites;
+    }
+
 
     // Setters
     public void setPoids(double poids) {
         this.poids = poids;
     }
 
-    public void setNombresVictoires(int nombresVictoires) {
+    public void setNombresVictoires() {
         this.nombresVictoires++;
     }
 
-    public void setNombresEgalite(int nombresEgalite) {
+    public void setNombresEgalite() {
         this.nombresEgalite++;
     }
 
-    public void setNombresDefaites(int nombresDefaites) {
+    public void setNombresDefaites() {
         this.nombresDefaites++;
     }
 
-    public void setListeTitres(List<String> listeTitres) {
-        this.listeTitres = listeTitres;
+    public void ajouterTitres(String titre) {
+        this.listeTitres.add(titre);
     }
-
-    
 
     // toString
     @Override
@@ -86,8 +92,5 @@ public class Combattant {
         return "Combattant [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", nomCombattant=" + nomCombattant
                 + ", poids=" + poids + ", listeTitres=" + listeTitres + "]";
     }
-
-    
-
 
 }
